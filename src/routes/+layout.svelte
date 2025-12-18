@@ -5,5 +5,10 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+	<title>Veopia</title>
+	<meta name="description" content="Veopia - A digital neighbourhood" />
+</svelte:head>
+
 {@render children()}
