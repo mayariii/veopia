@@ -16,12 +16,7 @@
 	<a href="/about" class="font-pt-serif text-sm text-slate-600 underline transition-colors">
 		about veopia
 	</a>
-	<a
-		href="https://mayari.notion.site/2cdcb6f1f0318069bccbda7e74edc924?pvs=143"
-		target="_blank"
-		rel="noopener noreferrer"
-		class="font-pt-serif text-sm text-slate-600 underline transition-colors"
-	>
+	<a href="/join" class="font-pt-serif text-sm text-slate-600 underline transition-colors">
 		join the neighbourhood
 	</a>
 </nav>
