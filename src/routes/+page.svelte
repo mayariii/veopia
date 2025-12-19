@@ -1,5 +1,5 @@
 <script lang="ts">
-	import VeopiaCentral from '$lib/assets/veopia-central.png';
+	import VeopiaCentral from '$lib/assets/veopia-central-2.png';
 	import { dev } from '$app/environment';
 	import { clickableAreas } from '$lib/config/clickableAreas';
 	import { tileToPercent, styleToString } from '$lib/utils/tileCoords';
@@ -9,9 +9,10 @@
 	let populationSize = $derived(clickableAreas.length);
 </script>
 
-<div class="flex h-screen w-screen items-center justify-center bg-water">
-	<div class="relative aspect-5/4 w-full max-w-[800px]">
-		<div class="absolute inset-x-0 top-0 text-center font-pt-serif text-slate-700">
+<div
+	class="fixed inset-0 mt-11 flex items-start justify-start overflow-auto bg-water pb-20 lg:justify-center">
+	<div class="relative h-[960px] w-[800px] shrink-0">
+		<div class="absolute inset-x-0 top-10 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>
 			<p class=" text-slate-600">
 				a digital neighbourhood <span class="font-sans text-sm">♡</span>
@@ -33,7 +34,6 @@
 				style={styleToString(tileToPercent(area.x, area.y, area.width, area.height))}>
 				<div
 					class="absolute inset-0 transition-all duration-200"
-					class:bg-blue-300={showClickableAreas}
 					class:bg-opacity-40={showClickableAreas}
 					class:border-2={showClickableAreas}
 					class:border-blue-600={showClickableAreas}>
@@ -41,14 +41,14 @@
 				</div>
 
 				<div
-					class="absolute top-full right-2 left-2 flex flex-col items-center gap-1 rounded-lg border-2 border-slate-400 bg-slate-100 p-2 text-center font-pt-serif">
+					class="absolute top-full right-2 left-2 flex flex-col items-center gap-1 rounded-lg border-2 border-slate-400 bg-slate-100/40 p-2 text-center font-pt-serif backdrop-blur-sm">
 					<div class="text-sm font-bold text-slate-700">{area.name}</div>
 					{#if area.bio}
 						<div class="text-xs text-slate-600 italic">{area.bio}</div>
 					{/if}
 
 					{#if area.location}
-						<div class="mt-1 text-[10px] text-slate-400">
+						<div class="mt-1 text-[10px] text-slate-500">
 							{area.location.plotNumber}
 							{prettifyTown(area.location.town)}
 						</div>

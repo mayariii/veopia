@@ -2,7 +2,7 @@
  * Map dimensions in tiles
  */
 export const MAP_WIDTH_TILES = 50;
-export const MAP_HEIGHT_TILES = 40;
+export const MAP_HEIGHT_TILES = 60;
 export const TILE_SIZE_PX = 16;
 
 export type Town = 'veopia-central';
@@ -18,7 +18,7 @@ export interface Location {
 export interface ClickableArea {
 	/** X position in tiles (0-49) */
 	x: number;
-	/** Y position in tiles (0-39) */
+	/** Y position in tiles (0-59) */
 	y: number;
 	/** Width in tiles */
 	width: number;
