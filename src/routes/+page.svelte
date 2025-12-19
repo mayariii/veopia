@@ -13,7 +13,9 @@
 	<div class="relative aspect-5/4 w-full max-w-[800px]">
 		<div class="absolute inset-x-0 top-0 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>
-			<p class=" text-slate-600">a digital neighborhood <span class="font-sans text-sm">♡</span></p>
+			<p class=" text-slate-600">
+				a digital neighbourhood <span class="font-sans text-sm">♡</span>
+			</p>
 			<p class="text-sm text-slate-600 italic">population: {populationSize}</p>
 		</div>
 
