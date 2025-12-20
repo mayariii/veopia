@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About Veopia</title>
+	<title>Veopia | About</title>
 </svelte:head>
 
 <div
