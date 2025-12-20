@@ -9,6 +9,10 @@
 	let populationSize = $derived(clickableAreas.length);
 </script>
 
+<svelte:head>
+	<title>Veopia | Explore</title>
+</svelte:head>
+
 <div
 	class="fixed inset-0 mt-11 flex items-start justify-start overflow-auto bg-water pb-20 lg:justify-center">
 	<div class="relative h-[960px] w-[800px] shrink-0">
