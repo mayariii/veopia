@@ -1,38 +1,8 @@
-# sv
+# veopia 🌱
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Veopia is a digital neighbourhood inspired by the towns of [Neopets](https://neopets.com), the vibes of [Stardew Valley](https://stardewvalley.net), [webrings](https://indieweb.org/webring), [this article about rediscovering the internet](https://darylcecile.net/notes/rediscovering-the-internet), and a mission to create a community space to discover and connect with other cool humans in a vast digital world.
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+<img width="1200" height="630" alt="veopia-og" src="https://github.com/user-attachments/assets/46d25dca-4e98-4ff6-8fa9-f0eb03977bb4" />
 
-```sh
-# create a new project in the current directory
-npx sv create
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
