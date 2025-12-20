@@ -112,17 +112,17 @@ export const clickableAreas: ClickableArea[] = [
 			town: 'veopian-isles'
 		}
 	},
-	// {
-	// 	x: 16,
-	// 	y: 17,
-	// 	width: 16,
-	// 	height: 12,
-	// 	url: '',
-	// 	name: '',
-	// 	bio: '',
-	// 	location: {
-	// 		plotNumber: 9,
-	// 		town: 'veopian-isles'
-	// 	}
-	// }
+	{
+		x: 21,
+		y: 51,
+		width: 13,
+		height: 7,
+		url: 'https://shaoruu.io',
+		name: 'shaoruu',
+		bio: 'coder @ cursor',
+		location: {
+			plotNumber: 9,
+			town: 'veopian-isles'
+		}
+	}
 ];
