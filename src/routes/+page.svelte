@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div
-	class="fixed inset-0 mt-11 flex items-start justify-start overflow-auto bg-water pb-20 lg:justify-center">
+	class="fixed inset-0 mt-11 flex items-start justify-start overflow-auto bg-water pb-32 lg:justify-center">
 	<div class="relative h-[960px] w-[800px] shrink-0">
 		<div class="absolute inset-x-0 top-10 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>

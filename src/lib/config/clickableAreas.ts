@@ -98,20 +98,20 @@ export const clickableAreas: ClickableArea[] = [
 			plotNumber: 7,
 				town: 'veopian-isles'
 		}
-	}
-	// {
-	// 	x: 40,
-	// 	y: 45,
-	// 	width: 10,
-	// 	height: 12,
-	// 	url: '',
-	// 	name: '',
-	// 	bio: '',
-	// 	location: {
-	// 		plotNumber: 8,
-	// 		town: 'veopian-isles'
-	// 	}
-	// }
+	},
+	{
+		x: 40,
+		y: 45,
+		width: 10,
+		height: 12,
+		url: 'https://carlyvalancy.com',
+		name: 'carly valancy',
+		bio: 'Founder of TETHER, Reach Out Party, and Momentum. I help people find their people',
+		location: {
+			plotNumber: 8,
+			town: 'veopian-isles'
+		}
+	},
 	// {
 	// 	x: 16,
 	// 	y: 17,
