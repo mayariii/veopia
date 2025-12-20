@@ -7,8 +7,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Veopia</title>
-	<meta name="description" content="Veopia - a digital neighbourhood" />
+	<title>Veopia | A digital neighbourhood</title>
+	<meta name="description" content="Veopia is a digital neighbourhood inspired by the towns of Neopets, the vibes of Stardew Valley, webrings, and a mission to create a community space to discover and connect with other cool humans in the digital world." />
 	<script
 		async
 		src="https://cloud.umami.is/script.js"
