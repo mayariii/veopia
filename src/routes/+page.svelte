@@ -1,5 +1,5 @@
 <script lang="ts">
-	import VeopiaCentral from '$lib/assets/veopia-central-2.png';
+	import VeopianIsles from '$lib/assets/veopian-isles.png';
 	import { dev } from '$app/environment';
 	import { clickableAreas } from '$lib/config/clickableAreas';
 	import { tileToPercent, styleToString } from '$lib/utils/tileCoords';
@@ -25,7 +25,7 @@
 		</div>
 
 		<img
-			src={VeopiaCentral}
+			src={VeopianIsles}
 			alt="Veopia - A digital neighbourhood"
 			class="h-full w-full object-contain" />
 

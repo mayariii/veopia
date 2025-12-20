@@ -5,7 +5,7 @@ export const MAP_WIDTH_TILES = 50;
 export const MAP_HEIGHT_TILES = 60;
 export const TILE_SIZE_PX = 16;
 
-export type Town = 'veopia-central';
+export type Town = 'veopia-central' | 'veopian-isles';
 
 export interface Location {
 	plotNumber: number;

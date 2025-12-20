@@ -18,7 +18,7 @@ export const clickableAreas: ClickableArea[] = [
 		bio: 'frontend x design engineer | maker of veopia and other things',
 		location: {
 			plotNumber: 1,
-			town: 'veopia-central'
+			town: 'veopian-isles'
 		}
 	},
 	{
@@ -31,7 +31,7 @@ export const clickableAreas: ClickableArea[] = [
 		bio: "community @ vercel ⏶ existing loudly 💜 | sharing thoughts in pixels since '08",
 		location: {
 			plotNumber: 2,
-			town: 'veopia-central'
+			town: 'veopian-isles'
 		}
 	},
 	{
@@ -44,35 +44,35 @@ export const clickableAreas: ClickableArea[] = [
 		bio: '🧠 a bucket of poetry, design, code, & cricket.',
 		location: {
 			plotNumber: 3,
-			town: 'veopia-central'
+			town: 'veopian-isles'
 		}
 	},
-	// {
-	// 	x: 38,
-	// 	y: 17,
-	// 	width: 10,
-	// 	height: 13,
-	// 	url: 'https://mimireyburn.com',
-	// 	name: 'mimi reyburn',
-	// 	bio: 'xyz',
-	// 	location: {
-	// 		plotNumber: 4,
-	// 		town: 'veopia-central'
-	// 	}
-	// },
-	// {
-	// 	x: 1,
-	// 	y: 22,
-	// 	width: 10,
-	// 	height: 12,
-	// 	url: 'https://darylcecile.net/',
-	// 	name: 'daryl',
-	// 	bio: 'software engineer @ github',
-	// 	location: {
-	// 		plotNumber: 5,
-	// 		town: 'veopia-central'
-	// 	}
-	// },
+	{
+		x: 38,
+		y: 20,
+		width: 10,
+		height: 10,
+		url: 'https://darylcecile.net/',
+		name: 'daryl',
+		bio: 'I make things on the internet: apps, tools, and the occasional questionable decision. Equal parts curious and exhausted, always tinkering, learning, and chasing the next “oh that’s cool” moment.',
+		location: {
+			plotNumber: 4,
+			town: 'veopian-isles'
+		}
+	},
+	{
+		x: 1,
+		y: 22,
+		width: 10,
+		height: 12,
+		url: 'https://www.kenthropic.com',
+		name: 'ken kunz',
+		bio: '👨‍💻 software for humans ⭐️ svelte ambassador 🎭 high-concept mischief',
+		location: {
+			plotNumber: 5,
+			town: 'veopian-isles'
+		}
+	},
 	{
 		x: 28,
 		y: 37,
@@ -83,7 +83,7 @@ export const clickableAreas: ClickableArea[] = [
 		bio: 'my hair is a css gradient',
 		location: {
 			plotNumber: 6,
-			town: 'veopia-central'
+			town: 'veopian-isles'
 		}
 	},
 	{
@@ -93,10 +93,10 @@ export const clickableAreas: ClickableArea[] = [
 		height: 11,
 		url: 'https://jda5.github.io/blog/',
 		name: 'jacob strauss',
-		bio: 'chaselabs | gumbo | better every loop',
+		bio: 'ChaseLabs | Gumbo | Better Every Loop',
 		location: {
 			plotNumber: 7,
-			town: 'veopia-central'
+				town: 'veopian-isles'
 		}
 	}
 	// {
@@ -104,12 +104,12 @@ export const clickableAreas: ClickableArea[] = [
 	// 	y: 45,
 	// 	width: 10,
 	// 	height: 12,
-	// 	url: 'https://carlyvalancy.com',
-	// 	name: 'carly valancy',
-	// 	bio: 'xyz',
+	// 	url: '',
+	// 	name: '',
+	// 	bio: '',
 	// 	location: {
 	// 		plotNumber: 8,
-	// 		town: 'veopia-central'
+	// 		town: 'veopian-isles'
 	// 	}
 	// }
 	// {
@@ -117,12 +117,12 @@ export const clickableAreas: ClickableArea[] = [
 	// 	y: 17,
 	// 	width: 16,
 	// 	height: 12,
-	// 	url: 'https://website.com',
-	// 	name: 'name',
-	// 	bio: 'bio',
+	// 	url: '',
+	// 	name: '',
+	// 	bio: '',
 	// 	location: {
 	// 		plotNumber: 9,
-	// 		town: 'veopia-central'
+	// 		town: 'veopian-isles'
 	// 	}
 	// }
 ];
