@@ -4,6 +4,7 @@
 
 <div
 	class="mx-auto flex max-w-2xl flex-col items-start justify-center gap-4 px-4 py-16 font-pt-serif [&_a]:text-blue-600 [&_a]:underline">
+	<p>each space is crafted tile by tile, and we are moving in new folks as new parts of veopia become available - fill in the form below to apply to become a fellow resident 🏡</p>
 	<iframe
 		title="Veopia Join Form"
 		src="https://mayari.notion.site/ebd//2cdcb6f1f0318069bccbda7e74edc924"
