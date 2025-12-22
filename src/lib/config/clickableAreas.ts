@@ -250,36 +250,36 @@ export const clickableAreas: ClickableArea[] = [
 		name: 'alexander vilinskyy',
 		bio: 'Designer & Founder @ Super Clear',
 		location: {
-			plotNumber: 8,
+			plotNumber: 10,
 			town: 'forest-of-veopia'
 		}
 	},
-	// {
-	// 	x: 13,
-	// 	y: 46,
-	// 	width: 8,
-	// 	height: 5,
-	// 	url: 'https://www.notion.so/Welcome-to-Notion-2d055820273d80b8868bf6f5e9cd7300?source=copy_link',
-	// 	name: 'hollie critchlow',
-	// 	bio: 'Product Design engineer - Hobby Collector - UK',
-	// 	location: {
-	// 		plotNumber: 9,
-	// 		town: 'forest-of-veopia'
-	// 	}
-	// },
-	// {
-	// 	x: 23,
-	// 	y: 37,
-	// 	width: 9,
-	// 	height: 7,
-	// 	url: 'https://abhivarde.in',
-	// 	name: 'abhi varde',
-	// 	bio: 'Software Developer • Creator of Sync UI',
-	// 	location: {
-	// 		plotNumber: 9,
-	// 		town: 'forest-of-veopia'
-	// 	}
-	// },
+	{
+		x: 22,
+		y: 37,
+		width: 11,
+		height: 7,
+		url: 'https://yannglt.com',
+		name: 'yannglt',
+		bio: 'Software Designer @ Linear ⚡ Always tinkering on Thunderstorm',
+		location: {
+			plotNumber: 12,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 34,
+		y: 44,
+		width: 10,
+		height: 5,
+		url: 'https://builtbymeh.com',
+		name: 'mehedi',
+		bio: 'i like making things that think outside the box. building cool things @ granola and touching grass w/ sonder',
+		location: {
+			plotNumber: 13,
+			town: 'forest-of-veopia'
+		}
+	},
 	{
 		x: 39,
 		y: 33,
@@ -302,7 +302,7 @@ export const clickableAreas: ClickableArea[] = [
 		name: 'jaydip sanghani',
 		bio: 'design engineer. creating thoughtful tools. minimalist.',
 		location: {
-			plotNumber: 10,
+			plotNumber: 11,
 			town: 'forest-of-veopia'
 		}
 	}
