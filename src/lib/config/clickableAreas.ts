@@ -96,7 +96,7 @@ export const clickableAreas: ClickableArea[] = [
 		bio: 'ChaseLabs | Gumbo | Better Every Loop',
 		location: {
 			plotNumber: 7,
-				town: 'veopian-isles'
+			town: 'veopian-isles'
 		}
 	},
 	{
@@ -123,6 +123,187 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			plotNumber: 9,
 			town: 'veopian-isles'
+		}
+	},
+	{
+		x: 0,
+		y: 2,
+		width: 8,
+		height: 5,
+		url: 'https://miguel.build',
+		name: 'miguel',
+		bio: 'friendly ambitious nerd',
+		location: {
+			plotNumber: 1,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 11,
+		y: 5,
+		width: 8,
+		height: 5,
+		url: 'https://tikhon.io',
+		name: 'tikhon',
+		bio: 'Design and Engineering',
+		location: {
+			plotNumber: 2,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 21,
+		y: 0,
+		width: 9,
+		height: 7,
+		url: 'https://mimireyburn.com',
+		name: 'mimi reyburn',
+		bio: 'Design Engineer, specialised in AI & making whimsical things',
+		location: {
+			plotNumber: 3,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 31,
+		y: 8,
+		width: 8,
+		height: 5,
+		url: 'https://alixwiesser.tumblr.com/',
+		name: 'mini',
+		location: {
+			plotNumber: 4,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 41,
+		y: 1,
+		width: 8,
+		height: 5,
+		url: 'https://chee.party',
+		name: 'chee',
+		bio: "i'm ok",
+		location: {
+			plotNumber: 5,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 40,
+		y: 19,
+		width: 8,
+		height: 5,
+		url: 'https://sinja.io',
+		name: 'olegwock',
+		bio: 'Painting buttons, cooking tasty meals, and making stuff on the net',
+		location: {
+			plotNumber: 7,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 9,
+		y: 17,
+		width: 10,
+		height: 5,
+		url: 'https://wmorales.dev',
+		name: 'wdev',
+		bio: 'salvadoran · cursor ambassador · sw engineer',
+		location: {
+			plotNumber: 6,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 3,
+		y: 29,
+		width: 9,
+		height: 6,
+		url: 'https://danbillson.com',
+		name: 'dan billson',
+		bio: 'product engineer at attio',
+		location: {
+			plotNumber: 8,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 13,
+		y: 30,
+		width: 9,
+		height: 7,
+		url: 'https://dqnamo.com',
+		name: 'JP',
+		bio: 'building, making, creating',
+		location: {
+			plotNumber: 7,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 2,
+		y: 44,
+		width: 10,
+		height: 5,
+		url: 'https://www.vilinskyy.com/',
+		name: 'alexander vilinskyy',
+		bio: 'Designer & Founder @ Super Clear',
+		location: {
+			plotNumber: 8,
+			town: 'forest-of-veopia'
+		}
+	},
+	// {
+	// 	x: 13,
+	// 	y: 46,
+	// 	width: 8,
+	// 	height: 5,
+	// 	url: 'https://www.notion.so/Welcome-to-Notion-2d055820273d80b8868bf6f5e9cd7300?source=copy_link',
+	// 	name: 'hollie critchlow',
+	// 	bio: 'Product Design engineer - Hobby Collector - UK',
+	// 	location: {
+	// 		plotNumber: 9,
+	// 		town: 'forest-of-veopia'
+	// 	}
+	// },
+	// {
+	// 	x: 23,
+	// 	y: 37,
+	// 	width: 9,
+	// 	height: 7,
+	// 	url: 'https://abhivarde.in',
+	// 	name: 'abhi varde',
+	// 	bio: 'Software Developer • Creator of Sync UI',
+	// 	location: {
+	// 		plotNumber: 9,
+	// 		town: 'forest-of-veopia'
+	// 	}
+	// },
+	{
+		x: 39,
+		y: 33,
+		width: 8,
+		height: 5,
+		url: 'https://abhivarde.in',
+		name: 'abhi varde',
+		bio: 'Software Developer • Creator of Sync UI',
+		location: {
+			plotNumber: 9,
+			town: 'forest-of-veopia'
+		}
+	},
+	{
+		x: 13,
+		y: 46,
+		width: 8,
+		height: 5,
+		url: 'https://jaydip.me',
+		name: 'jaydip sanghani',
+		bio: 'design engineer. creating thoughtful tools. minimalist.',
+		location: {
+			plotNumber: 10,
+			town: 'forest-of-veopia'
 		}
 	}
 ];

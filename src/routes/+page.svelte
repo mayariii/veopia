@@ -1,9 +1,10 @@
 <script lang="ts">
 	import VeopianIsles from '$lib/assets/veopian-isles.png';
+	import ForestOfVeopia from '$lib/assets/forest-of-veopia.png';
 	import { dev } from '$app/environment';
+	// import { prettifyTown } from '$lib/utils/utils';
 	import { clickableAreas } from '$lib/config/clickableAreas';
-	import { tileToPercent, styleToString } from '$lib/utils/tileCoords';
-	import { prettifyTown } from '$lib/utils/utils';
+	import { tileToPercent, styleToString, type ClickableArea } from '$lib/utils/tileCoords';
 
 	let showClickableAreas = $state(false);
 	let populationSize = $derived(clickableAreas.length);
@@ -13,8 +14,40 @@
 	<title>Veopia | Explore</title>
 </svelte:head>
 
+{#snippet clickableArea(area: ClickableArea)}
+	<a
+		href={area.url}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="group absolute"
+		style={styleToString(tileToPercent(area.x, area.y, area.width, area.height))}>
+		<div
+			class="absolute inset-0 transition-all duration-200"
+			class:bg-opacity-40={showClickableAreas}
+			class:border-2={showClickableAreas}
+			class:border-blue-600={showClickableAreas}>
+			<span class="sr-only">{area.name}'s website</span>
+		</div>
+
+		<div
+			class="absolute top-full right-1 left-1 flex flex-col items-center gap-1 rounded-lg border-2 border-slate-400 bg-slate-100/40 p-2 text-center font-pt-serif backdrop-blur-sm">
+			<div class="text-sm font-bold text-slate-700">{area.name}</div>
+			{#if area.bio}
+				<div class="text-xs text-slate-600 italic">{area.bio}</div>
+			{/if}
+
+			<!-- {#if area.location}
+				<div class="mt-1 text-[10px] text-slate-500">
+					{area.location.plotNumber}
+					{prettifyTown(area.location.town)}
+				</div>
+			{/if} -->
+		</div>
+	</a>
+{/snippet}
+
 <div
-	class="fixed inset-0 mt-11 flex items-start justify-start overflow-auto bg-water pb-32 lg:justify-center">
+	class="fixed inset-0 mt-11 grid grid-cols-[800px_800px] items-start justify-start overflow-auto bg-water pb-32">
 	<div class="relative h-[960px] w-[800px] shrink-0">
 		<div class="absolute inset-x-0 top-10 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>
@@ -29,36 +62,19 @@
 			alt="Veopia - A digital neighbourhood"
 			class="h-full w-full object-contain" />
 
-		{#each clickableAreas as area (area.url)}
-			<a
-				href={area.url}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="group absolute"
-				style={styleToString(tileToPercent(area.x, area.y, area.width, area.height))}>
-				<div
-					class="absolute inset-0 transition-all duration-200"
-					class:bg-opacity-40={showClickableAreas}
-					class:border-2={showClickableAreas}
-					class:border-blue-600={showClickableAreas}>
-					<span class="sr-only">{area.name}'s website</span>
-				</div>
+		{#each clickableAreas.filter((area) => area.location.town === 'veopian-isles') as area (area.url)}
+			{@render clickableArea(area)}
+		{/each}
+	</div>
 
-				<div
-					class="absolute top-full right-2 left-2 flex flex-col items-center gap-1 rounded-lg border-2 border-slate-400 bg-slate-100/40 p-2 text-center font-pt-serif backdrop-blur-sm">
-					<div class="text-sm font-bold text-slate-700">{area.name}</div>
-					{#if area.bio}
-						<div class="text-xs text-slate-600 italic">{area.bio}</div>
-					{/if}
+	<div class="relative h-[960px] w-[800px] shrink-0">
+		<img
+			src={ForestOfVeopia}
+			alt="Veopia - A digital neighbourhood"
+			class="h-full w-full object-contain" />
 
-					{#if area.location}
-						<div class="mt-1 text-[10px] text-slate-500">
-							{area.location.plotNumber}
-							{prettifyTown(area.location.town)}
-						</div>
-					{/if}
-				</div>
-			</a>
+		{#each clickableAreas.filter((area) => area.location.town === 'forest-of-veopia') as area (area.url)}
+			{@render clickableArea(area)}
 		{/each}
 	</div>
 
