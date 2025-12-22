@@ -15,7 +15,7 @@ export const clickableAreas: ClickableArea[] = [
 		height: 12,
 		url: 'https://mayari.io',
 		name: 'maya avendaño',
-		bio: 'frontend x design engineer | maker of veopia and other things | lover of cats, coding, figure skating, kickboxing, olmypic weightlifting',
+		bio: 'frontend x design engineer | maker of veopia and other things | lover of cats, coding, figure skating, kickboxing, olympic weightlifting',
 		location: {
 			plotNumber: 1,
 			town: 'veopian-isles'
@@ -54,7 +54,7 @@ export const clickableAreas: ClickableArea[] = [
 		height: 10,
 		url: 'https://darylcecile.net/',
 		name: 'daryl',
-		bio: 'I make things on the internet: apps, tools, and the occasional questionable decision. Equal parts curious and exhausted, always tinkering, learning, and chasing the next “oh that’s cool” moment.',
+		bio: 'software engineer @ GitHub. Making things on the internet; apps, tools and the occasional questionable decision.',
 		location: {
 			plotNumber: 4,
 			town: 'veopian-isles'
