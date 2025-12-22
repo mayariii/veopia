@@ -15,7 +15,7 @@ export const clickableAreas: ClickableArea[] = [
 		height: 12,
 		url: 'https://mayari.io',
 		name: 'maya avendaño',
-		bio: 'frontend x design engineer | maker of veopia and other things',
+		bio: 'frontend x design engineer | maker of veopia and other things | lover of cats, coding, figure skating, kickboxing, olmypic weightlifting',
 		location: {
 			plotNumber: 1,
 			town: 'veopian-isles'
