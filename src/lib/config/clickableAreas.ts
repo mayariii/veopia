@@ -171,6 +171,7 @@ export const clickableAreas: ClickableArea[] = [
 		height: 5,
 		url: 'https://alixwiesser.tumblr.com/',
 		name: 'mini',
+		bio: 'maker of silly prety things online, hostess of fun good times offline',
 		location: {
 			plotNumber: 4,
 			town: 'forest-of-veopia'
