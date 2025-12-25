@@ -365,5 +365,17 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			town: 'veopia-town-plaza'
 		}
-	}
+	},
+	{
+		type: 'interactive',
+		action: 'bulletin-board',
+		x: 16,
+		y: 7,
+		width: 6,
+		height: 3,
+		name: 'the bulletin board',
+		location: {
+			town: 'veopia-town-plaza'
+		}
+	},
 ];

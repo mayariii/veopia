@@ -4,6 +4,7 @@
 	import VeopiaTownPlaza from '$lib/assets/veopia-town-plaza.png';
 	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
 	import CatGreetModal from '$lib/components/CatGreetModal.svelte';
+	import BulletinBoardModal from '$lib/components/BulletinBoardModal.svelte';
 	import { dev } from '$app/environment';
 	// import { prettifyTown } from '$lib/utils/utils';
 	import { clickableAreas } from '$lib/config/clickableAreas';
@@ -14,9 +15,10 @@
 		type InteractiveArea
 	} from '$lib/utils/tileCoords';
 
-	let showClickableAreas = $state(false);
+	let showClickableAreas = $state(true);
 	let showWishingWell = $state(false);
 	let showCatGreet = $state(false);
+	let showBulletinBoard = $state(false);
 
 	// Only count plot areas for population
 	const plotAreas = clickableAreas.filter((area): area is PlotArea => area.type === 'plot');
@@ -27,6 +29,8 @@
 			showWishingWell = true;
 		} else if (area.action === 'cat-greet') {
 			showCatGreet = true;
+		} else if (area.action === 'bulletin-board') {
+			showBulletinBoard = true;
 		}
 	}
 </script>
@@ -156,3 +160,4 @@
 
 <WishingWellModal bind:open={showWishingWell} onclose={() => (showWishingWell = false)} />
 <CatGreetModal bind:open={showCatGreet} onclose={() => (showCatGreet = false)} />
+<BulletinBoardModal bind:open={showBulletinBoard} onclose={() => (showBulletinBoard = false)} />

@@ -44,7 +44,7 @@ export interface PlotArea extends BaseArea {
 /**
  * Interactive area types
  */
-export type InteractiveAction = 'wishing-well' | 'cat-greet';
+export type InteractiveAction = 'wishing-well' | 'cat-greet' | 'bulletin-board';
 
 /**
  * Interactive area - triggers an in-app action (modal, animation, etc.)
