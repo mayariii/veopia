@@ -2,6 +2,8 @@
 	import VeopianIsles from '$lib/assets/veopian-isles.png';
 	import ForestOfVeopia from '$lib/assets/forest-of-veopia.png';
 	import VeopiaTownPlaza from '$lib/assets/veopia-town-plaza.png';
+	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
+	import CatGreetModal from '$lib/components/CatGreetModal.svelte';
 	import { dev } from '$app/environment';
 	// import { prettifyTown } from '$lib/utils/utils';
 	import { clickableAreas } from '$lib/config/clickableAreas';
@@ -11,10 +13,10 @@
 		type PlotArea,
 		type InteractiveArea
 	} from '$lib/utils/tileCoords';
-	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
 
 	let showClickableAreas = $state(false);
 	let showWishingWell = $state(false);
+	let showCatGreet = $state(false);
 
 	// Only count plot areas for population
 	const plotAreas = clickableAreas.filter((area): area is PlotArea => area.type === 'plot');
@@ -23,6 +25,8 @@
 	function handleInteractiveClick(area: InteractiveArea) {
 		if (area.action === 'wishing-well') {
 			showWishingWell = true;
+		} else if (area.action === 'cat-greet') {
+			showCatGreet = true;
 		}
 	}
 </script>
@@ -73,22 +77,24 @@
 			class="absolute inset-0 transition-all duration-200"
 			class:bg-opacity-40={showClickableAreas}
 			class:border-2={showClickableAreas}
-			class:border-amber-500={showClickableAreas}>
+			class:border-[#5b7b4b]={showClickableAreas}>
 			<span class="sr-only">{area.name}</span>
 		</div>
 
-		{#if area.description}
+		{#if area.name}
 			<div
-				class="pointer-events-none absolute top-full right-1 left-1 flex flex-col items-center gap-1 rounded-lg border-2 border-amber-400/60 bg-amber-50/40 p-2 text-center font-pt-serif opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
-				<div class="text-sm font-bold text-amber-800">{area.name}</div>
-				<div class="text-xs text-amber-700 italic">{area.description}</div>
+				class="pointer-events-none absolute top-full right-1 left-1 flex flex-col items-center gap-1 rounded-lg border-2 border-[#5b7b4b]/60 bg-white/40 p-2 text-center font-pt-serif opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
+				<div class="text-sm font-bold text-[#3b5b2b]">{area.name}</div>
+				{#if area.description}
+					<div class="text-xs text-[#4b6b3b] italic">{area.description}</div>
+				{/if}
 			</div>
 		{/if}
 	</button>
 {/snippet}
 
 <div
-	class="fixed inset-0 mt-11 grid grid-cols-[800px_800px] gap-10 items-start justify-start overflow-auto bg-water pb-32">
+	class="fixed inset-0 mt-11 grid grid-cols-[800px_800px] items-start justify-start gap-10 overflow-auto bg-water pb-32">
 	<div class="relative h-[960px] w-[800px] shrink-0">
 		<div class="absolute inset-x-0 top-10 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>
@@ -149,3 +155,4 @@
 </div>
 
 <WishingWellModal bind:open={showWishingWell} onclose={() => (showWishingWell = false)} />
+<CatGreetModal bind:open={showCatGreet} onclose={() => (showCatGreet = false)} />

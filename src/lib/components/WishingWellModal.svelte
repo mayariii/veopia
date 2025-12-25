@@ -78,7 +78,7 @@
 					type="button"
 					onclick={handleClose}
 					disabled={isSubmitting}
-					class="close-btn absolute top-1.5 right-2 flex size-5 cursor-pointer items-center justify-center rounded border-2 border-[#843434] bg-linear-to-b from-[#d46464] to-[#b44444] text-xs font-bold text-white shadow-[1px_1px_0_rgba(0,0,0,0.3)] transition-all hover:scale-110 hover:bg-gradient-to-b hover:from-[#e47474] hover:to-[#c45454] active:scale-95 disabled:opacity-50"
+					class="close-btn absolute top-1.5 right-2 flex size-5 cursor-pointer items-center justify-center rounded border-2 border-[#843434] bg-linear-to-b from-[#d46464] to-[#b44444] text-xs font-bold text-white shadow-[1px_1px_0_rgba(0,0,0,0.3)] transition-all hover:scale-110 hover:bg-linear-to-b hover:from-[#e47474] hover:to-[#c45454] active:scale-95 disabled:opacity-50"
 					aria-label="Close">
 					✕
 				</button>
@@ -127,7 +127,7 @@
 								<button
 									type="submit"
 									disabled={isSubmitting || !wish.trim()}
-									class="cursor-pointer rounded-full border-2 border-[#947414] bg-linear-to-b from-[#f4d454] via-[#d4b434] to-[#c4a424] px-4 py-2.5 text-sm font-bold text-[#4b3b1b] shadow-[inset_1px_1px_0_#fff8b4,2px_2px_0_rgba(0,0,0,0.2)] transition-all text-shadow-[0_1px_0_rgba(255,255,255,0.3)] hover:-translate-y-px hover:bg-linear-to-b hover:from-[#ffe464] hover:via-[#e4c444] hover:to-[#d4b434] hover:shadow-[inset_1px_1px_0_#fff8b4,3px_3px_0_rgba(0,0,0,0.2)] active:translate-y-px active:shadow-[inset_1px_1px_0_#c4a424,1px_1px_0_rgba(0,0,0,0.1)] disabled:cursor-not-allowed disabled:opacity-60">
+									class="cursor-pointer rounded-full border-2 border-[#3b5b2b] bg-linear-to-b from-[#8bab7b] via-[#6b8b5b] to-[#5b7b4b] px-4 py-2.5 text-sm font-bold text-[#f4f8e4] shadow-[inset_1px_1px_0_#a4c494,2px_2px_0_rgba(0,0,0,0.2)] transition-all text-shadow-[0_1px_0_rgba(0,0,0,0.2)] hover:-translate-y-px hover:bg-linear-to-b hover:from-[#9bbb8b] hover:via-[#7b9b6b] hover:to-[#6b8b5b] hover:shadow-[inset_1px_1px_0_#a4c494,3px_3px_0_rgba(0,0,0,0.2)] active:translate-y-px active:shadow-[inset_1px_1px_0_#4b6b3b,1px_1px_0_rgba(0,0,0,0.1)] disabled:cursor-not-allowed disabled:opacity-60">
 									{#if isSubmitting}
 										<span class="twinkle">✦ wishing... ✦</span>
 									{:else}

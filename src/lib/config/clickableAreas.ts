@@ -353,5 +353,17 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			town: 'veopia-town-plaza'
 		}
+	},
+	{
+		type: 'interactive',
+		action: 'cat-greet',
+		x: 15,
+		y: 11,
+		width: 6,
+		height: 3,
+		name: 'churro the cat',
+		location: {
+			town: 'veopia-town-plaza'
+		}
 	}
 ];
