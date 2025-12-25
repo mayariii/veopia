@@ -16,19 +16,11 @@
 
 		isSubmitting = true;
 
-		// Simulate the wish being made (you could send this to a server later!)
+		// Simulate the wish being made
 		setTimeout(() => {
 			isSubmitting = false;
 			hasWished = true;
 			console.log('✨ Wish made:', wish);
-
-			// Reset after showing success
-			setTimeout(() => {
-				wish = '';
-				hasWished = false;
-				open = false;
-				onclose();
-			}, 2000);
 		}, 800);
 	}
 
@@ -59,117 +51,108 @@
 {#if open}
 	<!-- Backdrop -->
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm"
+		class="fixed inset-0 z-50 flex items-center justify-center bg-radial-[circle_at_center] from-[rgba(107,139,171,0.6)] from-0% to-[rgba(75,91,107,0.85)]"
 		onclick={handleBackdropClick}
 		onkeydown={(e) => e.key === 'Escape' && handleClose()}
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="wishing-well-title"
 		tabindex="-1">
-		<!-- Modal -->
 		<div
-			class="relative mx-4 w-full max-w-md animate-float-in rounded-2xl border-2 border-amber-300/50 bg-gradient-to-b from-slate-800 to-slate-900 p-6 shadow-2xl shadow-amber-500/20">
-			<!-- Sparkle decorations -->
-			<div class="pointer-events-none absolute -top-2 -left-2 text-2xl animate-pulse">✦</div>
+			class="animate-float-in relative mx-4 w-full max-w-sm font-['Trebuchet_MS','Comic_Sans_MS',cursive,sans-serif]">
+			<!-- Outer bevel frame -->
 			<div
-				class="pointer-events-none absolute -top-1 -right-3 text-xl animate-pulse"
-				style="animation-delay: 0.3s">
-				✧
-			</div>
-			<div
-				class="pointer-events-none absolute -bottom-2 left-1/2 text-lg animate-pulse"
-				style="animation-delay: 0.6s">
-				✦
-			</div>
-
-			<!-- Close button -->
-			<button
-				type="button"
-				onclick={handleClose}
-				disabled={isSubmitting}
-				class="absolute top-3 right-3 rounded-full p-1.5 text-slate-400 transition-colors hover:bg-slate-700 hover:text-slate-200 disabled:opacity-50"
-				aria-label="Close">
-				<svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M6 18L18 6M6 6l12 12" />
-				</svg>
-			</button>
-
-			{#if hasWished}
-				<!-- Success state -->
-				<div class="flex flex-col items-center gap-4 py-4 text-center">
-					<div class="text-5xl animate-bounce">✨</div>
-					<h2 class="font-pt-serif text-xl font-semibold text-amber-200">
-						Your wish has been cast!
-					</h2>
-					<p class="text-sm text-slate-400 italic">May the stars align in your favor...</p>
-				</div>
-			{:else}
-				<!-- Form state -->
-				<div class="mb-5 text-center">
-					<div class="mb-3 text-4xl">🌟</div>
-					<h2 id="wishing-well-title" class="font-pt-serif text-xl font-semibold text-amber-200">
-						The Wishing Well
-					</h2>
-					<p class="mt-1 text-sm text-slate-400 italic">What does your heart desire?</p>
+				class="relative overflow-hidden rounded-xl border-[3px] border-[#8b7355] bg-linear-to-br from-[#f4e8d4] via-[#e8dcc8] to-[#d4c8b4] shadow-[inset_2px_2px_0_#fff8f0,inset_-2px_-2px_0_#a08060,4px_4px_0_rgba(0,0,0,0.3),8px_8px_16px_rgba(0,0,0,0.2)]">
+				<!-- Title bar -->
+				<div
+					class="flex items-center justify-center gap-2 border-b-2 border-[#3b5b2b] bg-linear-to-b from-[#7b9b6b] via-[#5b7b4b] to-[#4b6b3b] px-3 py-2 text-[15px] font-bold tracking-wide text-[#f4f8e4] text-shadow-[1px_1px_0_#3b5b2b]">
+					<span class="star text-[#d4c454] text-shadow-[0_0_4px_#f4e464]">★</span>
+					<span>the wishing well</span>
+					<span
+						class="star text-[#d4c454] text-shadow-[0_0_4px_#f4e464]"
+						style="animation-delay: 1s">★</span>
 				</div>
 
-				<form onsubmit={handleSubmit} class="space-y-4">
-					<div>
-						<label for="wish-input" class="sr-only">Enter your wish</label>
-						<textarea
-							id="wish-input"
-							bind:value={wish}
-							disabled={isSubmitting}
-							placeholder="I wish for..."
-							rows="3"
-							class="w-full resize-none rounded-lg border border-slate-600 bg-slate-800/50 px-4 py-3 font-pt-serif text-slate-200 placeholder-slate-500 transition-colors focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 focus:outline-none disabled:opacity-50">
-						</textarea>
-					</div>
+				<!-- Close button -->
+				<button
+					type="button"
+					onclick={handleClose}
+					disabled={isSubmitting}
+					class="close-btn absolute top-1.5 right-2 flex size-5 cursor-pointer items-center justify-center rounded border-2 border-[#843434] bg-linear-to-b from-[#d46464] to-[#b44444] text-xs font-bold text-white shadow-[1px_1px_0_rgba(0,0,0,0.3)] transition-all hover:scale-110 hover:bg-gradient-to-b hover:from-[#e47474] hover:to-[#c45454] active:scale-95 disabled:opacity-50"
+					aria-label="Close">
+					✕
+				</button>
 
-					<button
-						type="submit"
-						disabled={isSubmitting || !wish.trim()}
-						class="group relative w-full overflow-hidden rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3 font-pt-serif font-semibold text-slate-900 shadow-lg transition-all hover:from-amber-400 hover:to-amber-500 hover:shadow-amber-500/30 disabled:opacity-50 disabled:cursor-not-allowed">
-						{#if isSubmitting}
-							<span class="flex items-center justify-center gap-2">
-								<svg class="size-5 animate-spin" fill="none" viewBox="0 0 24 24">
-									<circle
-										class="opacity-25"
-										cx="12"
-										cy="12"
-										r="10"
-										stroke="currentColor"
-										stroke-width="4" />
-									<path
-										class="opacity-75"
-										fill="currentColor"
-										d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-								</svg>
-								Making your wish...
-							</span>
-						{:else}
-							<span class="flex items-center justify-center gap-2">
-								<span>✨</span>
-								Make a Wish
-								<span>✨</span>
-							</span>
-						{/if}
-					</button>
-				</form>
-			{/if}
+				<!-- Content area -->
+				<div
+					class="border-t border-[#d4c8b4] bg-linear-to-b from-[#fffef8] to-[#f8f4e8] px-5 pt-4 pb-5">
+					{#if hasWished}
+						<!-- Success state -->
+						<div class="py-2 text-center">
+							<div class="sparkles my-2 text-xs tracking-[4px] text-[#d4b434]">✦ ✧ ★ ✧ ✦</div>
+							<div class="bounce my-2 text-5xl">🌟</div>
+							<h2 id="wishing-well-title" class="my-2 text-lg font-bold text-[#5b7b4b]">
+								your wish has been cast!
+							</h2>
+							<p class="text-[13px] leading-relaxed text-[#6b5b4b]">
+								the stars have heard your wish...<br />
+								may it come true! ☆
+							</p>
+							<div class="sparkles my-2 text-xs tracking-[4px] text-[#d4b434]">✦ ✧ ★ ✧ ✦</div>
+						</div>
+					{:else}
+						<!-- Form -->
+						<div class="text-center">
+							<div class="mb-2 flex items-center justify-center gap-2 text-sm text-[#8b7b5b]">
+								<span>✧</span>
+								<span class="bounce text-[32px]">🪙</span>
+								<span>✧</span>
+							</div>
+
+							<p id="wishing-well-title" class="mb-3 text-sm text-[#5b4b3b] italic">
+								toss a coin and make a wish!
+							</p>
+
+							<form onsubmit={handleSubmit} class="flex flex-col gap-3">
+								<label for="wish-input" class="sr-only">Enter your wish</label>
+								<textarea
+									id="wish-input"
+									bind:value={wish}
+									disabled={isSubmitting}
+									placeholder="i wish for..."
+									rows="3"
+									class="w-full resize-none rounded-lg border-2 border-[#b4a484] bg-[#fffef8] px-3 py-2.5 text-sm text-[#4b4b4b] shadow-[inset_1px_1px_3px_rgba(0,0,0,0.1),inset_-1px_-1px_0_#fff] transition-all placeholder:text-[#a49474] placeholder:italic focus:border-[#7b9b6b] focus:shadow-[inset_1px_1px_3px_rgba(0,0,0,0.1),0_0_0_3px_rgba(123,155,107,0.2)] focus:outline-none disabled:opacity-50">
+								</textarea>
+
+								<button
+									type="submit"
+									disabled={isSubmitting || !wish.trim()}
+									class="cursor-pointer rounded-full border-2 border-[#947414] bg-linear-to-b from-[#f4d454] via-[#d4b434] to-[#c4a424] px-4 py-2.5 text-sm font-bold text-[#4b3b1b] shadow-[inset_1px_1px_0_#fff8b4,2px_2px_0_rgba(0,0,0,0.2)] transition-all text-shadow-[0_1px_0_rgba(255,255,255,0.3)] hover:-translate-y-px hover:bg-linear-to-b hover:from-[#ffe464] hover:via-[#e4c444] hover:to-[#d4b434] hover:shadow-[inset_1px_1px_0_#fff8b4,3px_3px_0_rgba(0,0,0,0.2)] active:translate-y-px active:shadow-[inset_1px_1px_0_#c4a424,1px_1px_0_rgba(0,0,0,0.1)] disabled:cursor-not-allowed disabled:opacity-60">
+									{#if isSubmitting}
+										<span class="twinkle">✦ wishing... ✦</span>
+									{:else}
+										<span>✨ make a wish ✨</span>
+									{/if}
+								</button>
+							</form>
+
+							<p class="mt-3 text-[11px] text-[#a49474] italic">
+								~ wishes are free! only heard by you and the stars 🔮 ~
+							</p>
+						</div>
+					{/if}
+				</div>
+			</div>
 		</div>
 	</div>
 {/if}
 
 <style>
+	/* ANIMATIONS */
 	@keyframes float-in {
 		0% {
 			opacity: 0;
-			transform: scale(0.9) translateY(10px);
+			transform: scale(0.95) translateY(8px);
 		}
 		100% {
 			opacity: 1;
@@ -177,8 +160,44 @@
 		}
 	}
 
+	@keyframes twinkle {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.5;
+		}
+	}
+
+	@keyframes gentle-bounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-4px);
+		}
+	}
+
 	.animate-float-in {
-		animation: float-in 0.3s ease-out forwards;
+		animation: float-in 0.25s ease-out forwards;
+	}
+
+	.twinkle {
+		animation: twinkle 0.8s ease-in-out infinite;
+	}
+
+	.bounce {
+		animation: gentle-bounce 2s ease-in-out infinite;
+	}
+
+	.star {
+		animation: twinkle 2s ease-in-out infinite;
+	}
+
+	/* ===== SPARKLES ===== */
+	.sparkles {
+		animation: twinkle 1.5s ease-in-out infinite;
 	}
 </style>
-

@@ -13,7 +13,7 @@
 	} from '$lib/utils/tileCoords';
 	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
 
-	let showClickableAreas = $state(true);
+	let showClickableAreas = $state(false);
 	let showWishingWell = $state(false);
 
 	// Only count plot areas for population
