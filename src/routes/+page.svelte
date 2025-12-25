@@ -15,7 +15,7 @@
 		type InteractiveArea
 	} from '$lib/utils/tileCoords';
 
-	let showClickableAreas = $state(true);
+	let showClickableAreas = $state(false);
 	let showWishingWell = $state(false);
 	let showCatGreet = $state(false);
 	let showBulletinBoard = $state(false);
