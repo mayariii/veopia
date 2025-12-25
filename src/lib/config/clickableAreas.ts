@@ -357,10 +357,10 @@ export const clickableAreas: ClickableArea[] = [
 	{
 		type: 'interactive',
 		action: 'cat-greet',
-		x: 15,
+		x: 16,
 		y: 11,
 		width: 6,
-		height: 3,
+		height: 5,
 		name: 'churro the cat',
 		location: {
 			town: 'veopia-town-plaza'
@@ -369,10 +369,10 @@ export const clickableAreas: ClickableArea[] = [
 	{
 		type: 'interactive',
 		action: 'bulletin-board',
-		x: 16,
+		x: 15,
 		y: 7,
-		width: 6,
-		height: 3,
+		width: 8,
+		height: 4,
 		name: 'the bulletin board',
 		location: {
 			town: 'veopia-town-plaza'
