@@ -11,7 +11,9 @@ export const BULLETIN_MESSAGES: BulletinMessage[] = [
 		id: 1,
 		title: '🎄 happy holidays!',
 		date: 'dec 25, 2025',
-		content: `wishing you a wonderful holiday season filled with joy, warmth, and all round good vibes!
+		content: `wishing you a wonderful holiday season filled with joy, warmth, and all round good vibes! 
+
+we have a christmas market in the plaza until the 31st :)
 
          ★
         /|\\
@@ -52,4 +54,3 @@ we hope you enjoy your stay! ♡`,
 		author: '~ residents of veopia'
 	}
 ];
-
