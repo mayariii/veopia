@@ -8,7 +8,11 @@ import type { ClickableArea } from '$lib/utils/tileCoords';
  * To find positions, count tiles from top-left (0, 0)
  */
 export const clickableAreas: ClickableArea[] = [
+	// ═══════════════════════════════════════════════════════════════
+	// VEOPIAN ISLES - Plots
+	// ═══════════════════════════════════════════════════════════════
 	{
+		type: 'plot',
 		x: 17,
 		y: 18,
 		width: 14,
@@ -22,6 +26,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 3,
 		y: 2,
 		width: 11,
@@ -35,6 +40,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 34,
 		y: 2,
 		width: 12,
@@ -48,6 +54,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 38,
 		y: 20,
 		width: 10,
@@ -61,6 +68,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 1,
 		y: 22,
 		width: 10,
@@ -74,6 +82,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 28,
 		y: 37,
 		width: 10,
@@ -87,6 +96,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 10,
 		y: 40,
 		width: 11,
@@ -100,6 +110,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 40,
 		y: 45,
 		width: 10,
@@ -113,6 +124,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 21,
 		y: 51,
 		width: 13,
@@ -125,7 +137,12 @@ export const clickableAreas: ClickableArea[] = [
 			town: 'veopian-isles'
 		}
 	},
+
+	// ═══════════════════════════════════════════════════════════════
+	// FOREST OF VEOPIA - Plots
+	// ═══════════════════════════════════════════════════════════════
 	{
+		type: 'plot',
 		x: 0,
 		y: 2,
 		width: 8,
@@ -139,6 +156,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 11,
 		y: 5,
 		width: 8,
@@ -152,6 +170,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 21,
 		y: 0,
 		width: 9,
@@ -165,6 +184,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 31,
 		y: 8,
 		width: 8,
@@ -178,6 +198,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 41,
 		y: 1,
 		width: 8,
@@ -191,6 +212,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 40,
 		y: 19,
 		width: 8,
@@ -204,6 +226,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 9,
 		y: 17,
 		width: 10,
@@ -217,6 +240,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 3,
 		y: 29,
 		width: 9,
@@ -230,6 +254,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 13,
 		y: 30,
 		width: 9,
@@ -243,6 +268,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 2,
 		y: 44,
 		width: 10,
@@ -256,6 +282,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 22,
 		y: 37,
 		width: 11,
@@ -269,6 +296,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 34,
 		y: 44,
 		width: 10,
@@ -282,6 +310,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 39,
 		y: 33,
 		width: 8,
@@ -295,6 +324,7 @@ export const clickableAreas: ClickableArea[] = [
 		}
 	},
 	{
+		type: 'plot',
 		x: 13,
 		y: 46,
 		width: 8,
@@ -305,6 +335,23 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			plotNumber: 11,
 			town: 'forest-of-veopia'
+		}
+	},
+
+	// ═══════════════════════════════════════════════════════════════
+	// VEOPIA TOWN PLAZA - Interactive Areas
+	// ═══════════════════════════════════════════════════════════════
+	{
+		type: 'interactive',
+		action: 'wishing-well',
+		x: 27,
+		y: 10,
+		width: 10,
+		height: 5,
+		name: 'the wishing well',
+		description: 'make a wish...',
+		location: {
+			town: 'veopia-town-plaza'
 		}
 	}
 ];

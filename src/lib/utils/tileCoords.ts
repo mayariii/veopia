@@ -5,17 +5,17 @@ export const MAP_WIDTH_TILES = 50;
 export const MAP_HEIGHT_TILES = 60;
 export const TILE_SIZE_PX = 16;
 
-export type Town = 'veopia-central' | 'veopian-isles' | 'forest-of-veopia';
+export type Town = 'veopia-central' | 'veopian-isles' | 'forest-of-veopia' | 'veopia-town-plaza';
 
 export interface Location {
-	plotNumber: number;
+	plotNumber?: number;
 	town: Town;
 }
 
 /**
- * Clickable area configuration
+ * Base properties shared by all clickable areas
  */
-export interface ClickableArea {
+interface BaseArea {
 	/** X position in tiles (0-49) */
 	x: number;
 	/** Y position in tiles (0-59) */
@@ -24,15 +24,43 @@ export interface ClickableArea {
 	width: number;
 	/** Height in tiles */
 	height: number;
-	/** External URL to link to */
-	url: string;
-	/** Neighbor's name or area label */
+	/** Area label */
 	name: string;
-	/** Short description */
-	bio?: string;
 	/** Location */
 	location: Location;
 }
+
+/**
+ * Plot area - links to a neighbor's website
+ */
+export interface PlotArea extends BaseArea {
+	type: 'plot';
+	/** External URL to link to */
+	url: string;
+	/** Short description */
+	bio?: string;
+}
+
+/**
+ * Interactive area types
+ */
+export type InteractiveAction = 'wishing-well' | 'mailbox' | 'sign';
+
+/**
+ * Interactive area - triggers an in-app action (modal, animation, etc.)
+ */
+export interface InteractiveArea extends BaseArea {
+	type: 'interactive';
+	/** What action this area triggers */
+	action: InteractiveAction;
+	/** Optional description shown on hover */
+	description?: string;
+}
+
+/**
+ * Discriminated union of all clickable area types
+ */
+export type ClickableArea = PlotArea | InteractiveArea;
 
 /**
  * CSS positioning style for absolutely positioned elements

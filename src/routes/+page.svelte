@@ -1,20 +1,37 @@
 <script lang="ts">
 	import VeopianIsles from '$lib/assets/veopian-isles.png';
 	import ForestOfVeopia from '$lib/assets/forest-of-veopia.png';
+	import VeopiaTownPlaza from '$lib/assets/veopia-town-plaza.png';
 	import { dev } from '$app/environment';
 	// import { prettifyTown } from '$lib/utils/utils';
 	import { clickableAreas } from '$lib/config/clickableAreas';
-	import { tileToPercent, styleToString, type ClickableArea } from '$lib/utils/tileCoords';
+	import {
+		tileToPercent,
+		styleToString,
+		type PlotArea,
+		type InteractiveArea
+	} from '$lib/utils/tileCoords';
+	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
 
-	let showClickableAreas = $state(false);
-	let populationSize = $derived(clickableAreas.length);
+	let showClickableAreas = $state(true);
+	let showWishingWell = $state(false);
+
+	// Only count plot areas for population
+	const plotAreas = clickableAreas.filter((area): area is PlotArea => area.type === 'plot');
+	let populationSize = $derived(plotAreas.length);
+
+	function handleInteractiveClick(area: InteractiveArea) {
+		if (area.action === 'wishing-well') {
+			showWishingWell = true;
+		}
+	}
 </script>
 
 <svelte:head>
 	<title>Veopia | Explore</title>
 </svelte:head>
 
-{#snippet clickableArea(area: ClickableArea)}
+{#snippet plotArea(area: PlotArea)}
 	<a
 		href={area.url}
 		target="_blank"
@@ -46,8 +63,32 @@
 	</a>
 {/snippet}
 
+{#snippet interactiveArea(area: InteractiveArea)}
+	<button
+		type="button"
+		onclick={() => handleInteractiveClick(area)}
+		class="group absolute cursor-pointer"
+		style={styleToString(tileToPercent(area.x, area.y, area.width, area.height))}>
+		<div
+			class="absolute inset-0 transition-all duration-200"
+			class:bg-opacity-40={showClickableAreas}
+			class:border-2={showClickableAreas}
+			class:border-amber-500={showClickableAreas}>
+			<span class="sr-only">{area.name}</span>
+		</div>
+
+		{#if area.description}
+			<div
+				class="pointer-events-none absolute top-full right-1 left-1 flex flex-col items-center gap-1 rounded-lg border-2 border-amber-400/60 bg-amber-50/40 p-2 text-center font-pt-serif opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
+				<div class="text-sm font-bold text-amber-800">{area.name}</div>
+				<div class="text-xs text-amber-700 italic">{area.description}</div>
+			</div>
+		{/if}
+	</button>
+{/snippet}
+
 <div
-	class="fixed inset-0 mt-11 grid grid-cols-[800px_800px] items-start justify-start overflow-auto bg-water pb-32">
+	class="fixed inset-0 mt-11 grid grid-cols-[800px_800px] gap-10 items-start justify-start overflow-auto bg-water pb-32">
 	<div class="relative h-[960px] w-[800px] shrink-0">
 		<div class="absolute inset-x-0 top-10 text-center font-pt-serif text-slate-700">
 			<h1 class="text-2xl font-bold">welcome to veopia!</h1>
@@ -62,8 +103,11 @@
 			alt="Veopia - A digital neighbourhood"
 			class="h-full w-full object-contain" />
 
-		{#each clickableAreas.filter((area) => area.location.town === 'veopian-isles') as area (area.url)}
-			{@render clickableArea(area)}
+		{#each clickableAreas.filter((area): area is PlotArea => area.type === 'plot' && area.location.town === 'veopian-isles') as area (area.url)}
+			{@render plotArea(area)}
+		{/each}
+		{#each clickableAreas.filter((area): area is InteractiveArea => area.type === 'interactive' && area.location.town === 'veopian-isles') as area (area.name)}
+			{@render interactiveArea(area)}
 		{/each}
 	</div>
 
@@ -73,8 +117,25 @@
 			alt="Veopia - A digital neighbourhood"
 			class="h-full w-full object-contain" />
 
-		{#each clickableAreas.filter((area) => area.location.town === 'forest-of-veopia') as area (area.url)}
-			{@render clickableArea(area)}
+		{#each clickableAreas.filter((area): area is PlotArea => area.type === 'plot' && area.location.town === 'forest-of-veopia') as area (area.url)}
+			{@render plotArea(area)}
+		{/each}
+		{#each clickableAreas.filter((area): area is InteractiveArea => area.type === 'interactive' && area.location.town === 'forest-of-veopia') as area (area.name)}
+			{@render interactiveArea(area)}
+		{/each}
+	</div>
+
+	<div class="relative h-[960px] w-[800px] shrink-0">
+		<img
+			src={VeopiaTownPlaza}
+			alt="Veopia - A digital neighbourhood"
+			class="h-full w-full object-contain" />
+
+		{#each clickableAreas.filter((area): area is PlotArea => area.type === 'plot' && area.location.town === 'veopia-town-plaza') as area (area.url)}
+			{@render plotArea(area)}
+		{/each}
+		{#each clickableAreas.filter((area): area is InteractiveArea => area.type === 'interactive' && area.location.town === 'veopia-town-plaza') as area (area.name)}
+			{@render interactiveArea(area)}
 		{/each}
 	</div>
 
@@ -86,3 +147,5 @@
 		</button>
 	{/if}
 </div>
+
+<WishingWellModal bind:open={showWishingWell} onclose={() => (showWishingWell = false)} />
