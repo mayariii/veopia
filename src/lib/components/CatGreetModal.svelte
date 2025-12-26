@@ -1,6 +1,10 @@
 <script lang="ts">
 	import ChurroWalking from '$lib/assets/churro-walking.png';
 	import ChurroSitting from '$lib/assets/churro-sitting.png';
+	import blupSound from '$lib/assets/audio/blup_1.wav';
+	import blup2Sound from '$lib/assets/audio/blup_2.wav';
+	import punchSound from '$lib/assets/audio/punch_1.wav';
+	import { playSound } from '$lib/utils/utils';
 
 	interface Props {
 		open: boolean;
@@ -11,16 +15,20 @@
 
 	type InteractionState = 'greeting' | 'petted' | 'fed';
 	let state = $state<InteractionState>('greeting');
+	let previousOpen = false;
 
 	function handlePet() {
+		playSound(blupSound);
 		state = 'petted';
 	}
 
 	function handleTreat() {
+		playSound(blupSound);
 		state = 'fed';
 	}
 
 	function handleClose() {
+		playSound(punchSound);
 		state = 'greeting';
 		open = false;
 		onclose();
@@ -37,6 +45,13 @@
 			handleClose();
 		}
 	}
+
+	$effect(() => {
+		if (open && !previousOpen) {
+			playSound(blup2Sound);
+		}
+		previousOpen = open;
+	});
 </script>
 
 <svelte:window onkeydown={handleKeydown} />

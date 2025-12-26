@@ -1,4 +1,9 @@
 <script lang="ts">
+	import blupSound from '$lib/assets/audio/blup_1.wav';
+	import blup2Sound from '$lib/assets/audio/blup_2.wav';
+	import punchSound from '$lib/assets/audio/punch_1.wav';
+	import { playSound } from '$lib/utils/utils';
+
 	interface Props {
 		open: boolean;
 		onclose: () => void;
@@ -9,11 +14,13 @@
 	let wish = $state('');
 	let isSubmitting = $state(false);
 	let hasWished = $state(false);
+	let previousOpen = false;
 
 	function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
 		if (!wish.trim()) return;
 
+		playSound(blupSound);
 		isSubmitting = true;
 
 		// Simulate the wish being made
@@ -26,6 +33,7 @@
 
 	function handleClose() {
 		if (!isSubmitting) {
+			playSound(punchSound);
 			wish = '';
 			hasWished = false;
 			open = false;
@@ -44,6 +52,13 @@
 			handleClose();
 		}
 	}
+
+	$effect(() => {
+		if (open && !previousOpen) {
+			playSound(blup2Sound);
+		}
+		previousOpen = open;
+	});
 </script>
 
 <svelte:window onkeydown={handleKeydown} />

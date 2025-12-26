@@ -1,5 +1,9 @@
 <script lang="ts">
 	import { BULLETIN_MESSAGES } from '$lib/config/bulletinMessages';
+	import blupSound from '$lib/assets/audio/blup_1.wav';
+	import blup2Sound from '$lib/assets/audio/blup_2.wav';
+	import punchSound from '$lib/assets/audio/punch_1.wav';
+	import { playSound } from '$lib/utils/utils';
 
 	interface Props {
 		open: boolean;
@@ -9,19 +13,23 @@
 	let { open = $bindable(), onclose }: Props = $props();
 
 	let currentIndex = $state(0);
+	let previousOpen = false;
 
 	const currentMessage = $derived(BULLETIN_MESSAGES[currentIndex]);
 	const totalMessages = BULLETIN_MESSAGES.length;
 
 	function handlePrev() {
+		playSound(blupSound);
 		currentIndex = (currentIndex - 1 + totalMessages) % totalMessages;
 	}
 
 	function handleNext() {
+		playSound(blupSound);
 		currentIndex = (currentIndex + 1) % totalMessages;
 	}
 
 	function handleClose() {
+		playSound(punchSound);
 		currentIndex = 0;
 		open = false;
 		onclose();
@@ -42,6 +50,13 @@
 			handleClose();
 		}
 	}
+
+	$effect(() => {
+		if (open && !previousOpen) {
+			playSound(blup2Sound);
+		}
+		previousOpen = open;
+	});
 </script>
 
 <svelte:window onkeydown={handleKeydown} />
@@ -127,7 +142,10 @@
 							{#each BULLETIN_MESSAGES as message, i (message.id)}
 								<button
 									type="button"
-									onclick={() => (currentIndex = i)}
+									onclick={() => {
+										playSound(blupSound);
+										currentIndex = i;
+									}}
 									class="size-2 cursor-pointer rounded-full border border-[#8b7b5b] transition-all {i ===
 									currentIndex
 										? 'scale-125 bg-[#5b7b4b]'

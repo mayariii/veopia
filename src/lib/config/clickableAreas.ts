@@ -377,5 +377,5 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			town: 'veopia-town-plaza'
 		}
-	},
+	}
 ];

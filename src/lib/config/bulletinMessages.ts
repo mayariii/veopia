@@ -37,9 +37,7 @@ we have a christmas market in the plaza until the 31st :)
 
 we're so excited to have you join our growing community! the forest is a special place where creativity and nature come together.
 
-feel free to explore your new neighborhood, meet your neighbors, and make yourself at home. we're all here to support each other and build something beautiful together.
-
-happy settling in! 🌲✨`,
+make yourself at home (and don't taunt the bears!)`,
 		author: '~ caretaker of veopia'
 	},
 	{
