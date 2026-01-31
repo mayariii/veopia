@@ -597,6 +597,123 @@ export const clickableAreas: ClickableArea[] = [
 	},
 
 	// ═══════════════════════════════════════════════════════════════
+	// VEOPIA MEADOWS - Plots
+	// ═══════════════════════════════════════════════════════════════å
+	{
+		type: 'plot',
+		x: 0,
+		y: 39.7,
+		width: 9,
+		height: 5.5,
+		url: 'https://scottspence.com',
+		name: 'spences10',
+		bio: 'This is where I write about many things, including, but not limited to Svelte, SvelteKit, JavaScript, Tailwind and many more web dev related topics.',
+		location: {
+			plotNumber: 32,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 12,
+		y: 37,
+		width: 8.5,
+		height: 5.5,
+		url: 'https://jasminexli.com',
+		name: 'Jasmine Li',
+		bio: 'ai alignment, writing, good futures',
+		location: {
+			plotNumber: 33,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 23,
+		y: 38,
+		width: 8.5,
+		height: 5.5,
+		url: 'https://christinacodes.dev/',
+		name: 'Christina',
+		bio: 'Keeping software whimsical and silly',
+		location: {
+			plotNumber: 34,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 32,
+		y: 36,
+		width: 8,
+		height: 5.5,
+		url: 'https://sar.s1d.me/',
+		name: 'sarthaksidhant',
+		bio: 'i think there i am what i think i am',
+		location: {
+			plotNumber: 35,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 41.5,
+		y: 35,
+		width: 8,
+		height: 5.5,
+		url: 'https://www.adandara.com/',
+		name: 'dandara',
+		bio: 'designer + code + life designer, most importantly: curator',
+		location: {
+			plotNumber: 36,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 39,
+		y: 48,
+		width: 8,
+		height: 5.5,
+		url: 'https://stegranados.vercel.app',
+		name: 'Steven Granados',
+		bio: 'Quality Engineer | Quality Automation Lead - making testing content for LATAM viewers on TikTok: angry_tester',
+		location: {
+			plotNumber: 37,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 28,
+		y: 50,
+		width: 8,
+		height: 5.5,
+		url: 'https://www.compileralchemy.com',
+		name: 'Abdur-Rahmaan Janhangeer',
+		bio: 'Internals + OpenSource + Python peer',
+		location: {
+			plotNumber: 38,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 17.5,
+		y: 50,
+		width: 8,
+		height: 5.5,
+		url: 'https://abdussalampopoola.com',
+		name: 'Abdussalam',
+		bio: 'Design Engineer at Thrads',
+		location: {
+			plotNumber: 39,
+			town: 'veopia-meadows'
+		}
+	},
+
+
+	// ═══════════════════════════════════════════════════════════════
 	// VEOPIA TOWN PLAZA - Interactive Areas
 	// ═══════════════════════════════════════════════════════════════
 	{

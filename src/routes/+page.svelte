@@ -2,6 +2,7 @@
 	import VeopianIsles from '$lib/assets/veopian-isles.png';
 	import ForestOfVeopia from '$lib/assets/forest-of-veopia.png';
 	import VeopiaTownPlaza from '$lib/assets/veopia-town-plaza.png';
+	import VeopiaMeadows from '$lib/assets/veopia-meadows.png';
 	import WishingWellModal from '$lib/components/WishingWellModal.svelte';
 	import CatGreetModal from '$lib/components/CatGreetModal.svelte';
 	import BulletinBoardModal from '$lib/components/BulletinBoardModal.svelte';
@@ -145,6 +146,20 @@
 			{@render plotArea(area)}
 		{/each}
 		{#each clickableAreas.filter((area): area is InteractiveArea => area.type === 'interactive' && area.location.town === 'veopia-town-plaza') as area (area.name)}
+			{@render interactiveArea(area)}
+		{/each}
+	</div>
+
+	<div class="relative h-[960px] w-[800px] shrink-0">
+		<img
+			src={VeopiaMeadows}
+			alt="Veopia - The Meadows"
+			class="h-full w-full object-contain" />
+
+		{#each clickableAreas.filter((area): area is PlotArea => area.type === 'plot' && area.location.town === 'veopia-meadows') as area (area.url)}
+			{@render plotArea(area)}
+		{/each}
+		{#each clickableAreas.filter((area): area is InteractiveArea => area.type === 'interactive' && area.location.town === 'veopia-meadows') as area (area.name)}
 			{@render interactiveArea(area)}
 		{/each}
 	</div>
