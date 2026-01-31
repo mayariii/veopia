@@ -603,7 +603,7 @@ export const clickableAreas: ClickableArea[] = [
 		type: 'plot',
 		x: 0,
 		y: 39.7,
-		width: 9,
+		width: 8,
 		height: 5.5,
 		url: 'https://scottspence.com',
 		name: 'spences10',
@@ -708,6 +708,20 @@ export const clickableAreas: ClickableArea[] = [
 		bio: 'Design Engineer at Thrads',
 		location: {
 			plotNumber: 39,
+			town: 'veopia-meadows'
+		}
+	},
+	{
+		type: 'plot',
+		x: 7,
+		y: 52,
+		width: 8,
+		height: 5.5,
+		url: 'https://matsiutsia.com/',
+		name: 'Sofiia Matsiutsia',
+		bio: 'Co-founder, Experience & Design Lead at Vibe Coding Collective',
+		location: {
+			plotNumber: 40,
 			town: 'veopia-meadows'
 		}
 	},
