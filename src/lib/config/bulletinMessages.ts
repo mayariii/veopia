@@ -8,6 +8,19 @@ export interface BulletinMessage {
 
 export const BULLETIN_MESSAGES: BulletinMessage[] = [
 	{
+		id: 4,
+		title: '🏠 january bulletin',
+		date: 'jan 31, 2026',
+		content: `after a lovely christmas break, construction resumed to open a new area!
+		
+		west veopia is in prime location, just a stones throw from the town plaza offering a blend of town living and nature dwelling. 
+		
+		a new café has also opened in the plaza, offering a range of delicious treats and drinks. it has become a popular spot for co-working too.
+		
+		a huge welcome to our january residents!`,
+		author: '~ caretaker of veopia'
+	},
+	{
 		id: 1,
 		title: '🎄 happy holidays!',
 		date: 'dec 25, 2025',
