@@ -19,7 +19,7 @@ export const clickableAreas: ClickableArea[] = [
 		height: 12,
 		url: 'https://mayari.io',
 		name: 'maya avendaño',
-		bio: 'frontend x design engineer | maker of veopia and other things | lover of cats, coding, figure skating, kickboxing, olympic weightlifting',
+		bio: 'dx engineer @ vercel ⏶ | frontend x design engineering | maker of veopia and other things | fan of cats + community | figure skater, kickboxer, oly weightlifter',
 		location: {
 			plotNumber: 1,
 			town: 'veopian-isles'
@@ -335,6 +335,264 @@ export const clickableAreas: ClickableArea[] = [
 		location: {
 			plotNumber: 11,
 			town: 'forest-of-veopia'
+		}
+	},
+
+
+	// ═══════════════════════════════════════════════════════════════
+	// VEOPIA TOWN PLAZA - Plots
+	// ═══════════════════════════════════════════════════════════════
+	{
+		type: 'plot',
+		x: 1,
+		y: 47,
+		width: 9,
+		height: 5.5,
+		url: 'https://www.vixclotet.com/',
+		name: 'Vix <3',
+		bio: 'tech founder and software engineer 🩵 | v0 ambassador 🖤 | building things on the internet and doing cool stuff for people 🌟 | always traveling ✈️',
+		location: {
+			plotNumber: 14,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 9,
+		y: 29,
+		width: 6,
+		height: 5.5,
+		url: 'https://hugorcd.com',
+		name: 'Hugo',
+		bio: 'Software Engineer at Vercel ▲',
+		location: {
+			plotNumber: 15,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 6,
+		y: 16,
+		width: 9,
+		height: 5.5,
+		url: 'https://raz.lol',
+		name: 'Razberry',
+		bio: 'founder & cozy coder ~ building for personal, malleable software',
+		location: {
+			plotNumber: 16,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 1.5,
+		y: 23,
+		width: 5,
+		height: 5.5,
+		url: 'https://luke.boo',
+		name: 'luke',
+		bio: 'funware',
+		location: {
+			plotNumber: 17,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 15,
+		y: 24,
+		width: 7,
+		height: 5.5,
+		url: 'https://timganiev.com/',
+		name: 'tim',
+		bio: "post-training & rl 🥺👉👈",
+		location: {
+			plotNumber: 18,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 1,
+		y: 35,
+		width: 8,
+		height: 5.2,
+		url: 'https://williamhzo.me',
+		name: 'william',
+		bio: 'builder, playing positive sum games with code, design & humans',
+		location: {
+			plotNumber: 19,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 13,
+		y: 51,
+		width: 10,
+		height: 5.5,
+		url: 'https://chintansudani.com',
+		name: 'Chintan',
+		bio: 'I help founders and business owners to launch ideas through fast, scalable, and best editorial websites using JAMstack.',
+		location: {
+			plotNumber: 20,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 34,
+		y: 17,
+		width: 8,
+		height: 5.5,
+		url: 'https://nicos.website',
+		name: 'Nico Escudero',
+		bio: 'Product Manager @ inploi',
+		location: {
+			plotNumber: 21,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 16,
+		y: 42,
+		width: 8.2,
+		height: 5.2,
+		url: 'https://r74n.com/',
+		name: 'R74n',
+		bio: 'Indie web developer',
+		location: {
+			plotNumber: 22,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 43,
+		y: 35,
+		width: 7,
+		height: 5.5,
+		url: 'https://adjohu.com',
+		name: 'Adam Hutchinson',
+		bio: 'I build things',
+		location: {
+			plotNumber: 23,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 43,
+		y: 19,
+		width: 7,
+		height: 5.5,
+		url: 'https://pim.dev',
+		name: 'Pim de Wit',
+		bio: 'creative technologist, co-founder @ Dossia',
+		location: {
+			plotNumber: 24,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 28,
+		y: 20,
+		width: 6,
+		height: 5.5,
+		url: 'https://guillemcotcha.com',
+		name: 'guigz',
+		bio: 'software designer',
+		location: {
+			plotNumber: 25,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 37,
+		y: 39,
+		width: 6,
+		height: 5.5,
+		url: 'https://thereallo.dev',
+		name: 'Thereallo',
+		bio: 'frontend nerd',
+		location: {
+			plotNumber: 26,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 43,
+		y: 52,
+		width: 7,
+		height: 5.5,
+		url: 'https://samwho.dev',
+		name: 'Sam Rose',
+		bio: 'That guy who makes visual essays about programming.',
+		location: {
+			plotNumber: 27,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 36,
+		y: 53,
+		width: 7,
+		height: 4,
+		url: 'https://samwho.dev/dogs',
+		name: 'Haskie, Sage & Doe',
+		bio: 'woof!',
+		location: {
+			plotNumber: 29,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 28,
+		y: 34,
+		width: 7,
+		height: 5.5,
+		url: 'https://glenn.me',
+		name: 'Glenn Hitchcock',
+		bio: 'Designer and Director, focussed on brand, product & process at poolside.',
+		location: {
+			plotNumber: 28,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+
+		type: 'plot',
+		x: 35,
+		y: 28,
+		width: 8,
+		height: 5.2,
+		url: 'https://iniabiodun.com',
+		name: 'Ìní',
+		bio: 'Lawyer, maker and designer chasing wonder',
+		location: {
+			plotNumber: 30,
+			town: 'veopia-town-plaza'
+		}
+	},
+	{
+		type: 'plot',
+		x: 28,
+		y: 50,
+		width: 7,
+		height: 5.5,
+		url: 'https://bhrigu.dev',
+		name: 'Bhrigu',
+		bio: 'Software Engineer at Vercel ▲',
+		location: {
+			plotNumber: 31,
+			town: 'veopia-town-plaza'
 		}
 	},
 
