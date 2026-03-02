@@ -17,8 +17,8 @@ export const clickableAreas: ClickableArea[] = [
 		y: 18,
 		width: 14,
 		height: 12,
-		url: 'https://mayari.io',
-		name: 'maya avendaño',
+		url: 'https://mayven.computer',
+		name: 'mayven',
 		bio: 'dx engineer @ vercel ⏶ | frontend x design engineering | maker of veopia and other things | fan of cats + community | figure skater, kickboxer, oly weightlifter',
 		location: {
 			plotNumber: 1,
